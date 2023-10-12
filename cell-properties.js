@@ -1,26 +1,8 @@
 "use strict";
-// creating cell properties storage
-let sheetDB = [];
-
-for (let i = 0; i < rows; i++) {
-  let sheetRow = [];
-  for (let j = 0; j < cols; j++) {
-    let cellProps = {
-      isBold: false,
-      isItalic: false,
-      isUnderlined: false,
-      alignment: "left",
-      fontFamily: "monospace",
-      fontSize: "14",
-      fontColor: "#000000",
-      BGColor: "#000000",
-      value: "",
-      formula: "",
-      children: new Set(),
-    };
-    sheetRow.push(cellProps);
-  }
-  sheetDB.push(sheetRow);
+//initialising first sheet data by default
+{
+  let firstButton = document.querySelector(".sheet-add-icon");
+  firstButton.click();
 }
 
 const decodeIdFromAddress = address => {
@@ -110,7 +92,7 @@ fontColor.addEventListener("change", e => {
   let address = addressBar.value;
   if (!address) return;
   const [cell, cellProp] = getCellAndCellProp(address);
-  console.log(fontColor.value);
+
   cellProp.fontColor = fontColor.value; // change the data
   cell.style.color = cellProp.fontColor; // change the representation of cell
 });
@@ -196,7 +178,7 @@ const addListenerToCell = cell => {
 
     let formulaBar = document.querySelector(".formula-bar");
     formulaBar.value = cellProp.formula;
-    cell.value = cellProp.value;
+    cell.innerText = cellProp.value;
   });
 };
 let cells = document.querySelectorAll(".cell");

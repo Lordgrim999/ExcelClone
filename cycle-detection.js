@@ -1,13 +1,3 @@
-let graphComponentMatrix = [];
-
-for (let i = 0; i < rows; i++) {
-  let row = [];
-  for (let j = 0; j < cols; j++) {
-    row.push([]);
-  }
-  graphComponentMatrix.push(row);
-}
-
 const dfs = (graphComponentMatrix, i, j, visited, dfsVisited) => {
   visited[i][j] = true;
   dfsVisited[i][j] = true;

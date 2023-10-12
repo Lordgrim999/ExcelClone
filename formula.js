@@ -45,7 +45,6 @@ for (let i = 0; i < rows; i++) {
       const [activeCell, cellProp] = getCellAndCellProp(address);
       if (!activeCell.innerText) return;
 
-      console.log("blurred", activeCell.innerText, cellProp.value);
       if (activeCell.innerText != cellProp.value) {
         cellProp.value = activeCell.innerText;
         // if data is changed for this cell update all it's children value
@@ -60,13 +59,13 @@ for (let i = 0; i < rows; i++) {
 const updateChildrenCells = parentAddress => {
   let [parentCell, parentCellProp] = getCellAndCellProp(parentAddress);
   let children = parentCellProp.children;
-  console.log("parent address", parentAddress, parentCellProp);
+
   if (children.length == 0) return;
   for (let child of children) {
     let childAddress = child;
 
     let [childCell, childCellProp] = getCellAndCellProp(childAddress);
-    console.log("child", childAddress, childCellProp);
+
     let evaluatedValue = evaluateExpression(
       childCellProp.formula,
       childAddress
@@ -134,6 +133,6 @@ formulaBar.addEventListener("keydown", async e => {
   }
   let evaluatedValue = evaluateExpression(formulaBar.value, address);
   updateCellValueAndFormula(evaluatedValue, formulaBar.value, address);
-  console.log(cellProp);
+
   updateChildrenCells(address);
 });

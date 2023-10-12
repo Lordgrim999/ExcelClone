@@ -74,6 +74,8 @@ body{
     align-items: center;
     width: calc(100vw - 2vw);
     padding-left: 1rem;
+    overflow: auto;
+   
 }
 .sheet-action-container{
     height:3rem;
@@ -84,17 +86,30 @@ body{
     padding-right:0.5rem;
     gap:1rem;
     
+    
 }
 
 .sheet-add-icon
 {
     width:2vw;
 }
+.sheet-add-icon:hover
+{
+    cursor: pointer;
+}
 .sheet-folder{
     text-decoration: underline;
     font-weight: 600;
     text-decoration-thickness: 3px;
     font-size: 0.9rem;
+    min-width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+.sheet-folder:hover{
+    cursor: pointer;
 }
 
 
@@ -217,4 +232,16 @@ body{
 {
     display: flex;
     z-index: 1;
+}
+.selected-action{
+    background: #edf2fa;
+    margin-bottom: 0em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    height: 57%;
+    width: 5%;
+    align-items: self-end;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }

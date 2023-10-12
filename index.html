@@ -12,19 +12,19 @@
 <body>
     <div class="page-action-container">
         <div class="page-action">Home</div>
-        <div class="page-action">File</div>
+        <div class="page-action selected-action">File</div>
         <div class="page-action">Insert</div>
         <div class="page-action">Layout</div>
         <div class="page-action">Help</div>
     </div>
     <div class="cell-props-container">
-        <span class="material-icons ">
+        <span class="material-icons copy">
             content_copy
         </span>
-        <span class="material-icons ">
+        <span class="material-icons cut">
             content_cut
         </span>
-        <span class="material-icons ">
+        <span class="material-icons paste">
             content_paste
         </span>
         <select class="font-family-prop">
@@ -80,6 +80,12 @@
             </span>
             <input type="color" class="background-color-prop">
         </div>
+        <span class="right material-icons alignment download">
+            cloud_download
+        </span>
+        <span class="right material-icons alignment upload ">
+            cloud_upload
+        </span>
     </div>
 
     <div class="formula-action-container">
@@ -105,14 +111,18 @@
         </div>
 
         <div class="sheet-folder-container">
-            <div class="sheet-folder">sheet 1</div>
+
         </div>
     </div>
     <script src="./grid.js"></script>
+    <script src="./sheet-management.js"></script>
     <script src="./cell-properties.js"></script>
     <script src="./cycle-detection.js  "></script>
     <script src="./trace-cyclic-path.js  "></script>
     <script src="./formula.js"></script>
+    <script src="./cop-paste-functionality.js"></script>
+    <script src="./upload-download-sheets.js"></script>
+
 </body>
 
 </html>
