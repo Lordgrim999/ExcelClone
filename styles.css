@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding:0;
+    margin:0;
+}
+
+.page-action-container{
+    height:3rem;
+    background-color: #207245;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 1rem;
+    
+}
+.page-action{
+    margin:0.5rem;
+    color:#f1f2f6;
+}
+
+
+/* cell properties styles */
+.cell-props-container{
+    height:3rem;
+    background-color: #edf2fa;
+    display: flex;
+    align-items: center;
+    padding-left:0.5rem;
+    padding-left: 1rem;
+}
+
+.cell-props-container >*{
+    margin-right:1rem;
+    display: inline-block;
+}
+.cell-props-container >*:hover{
+   cursor: pointer;
+}
+.cell-props-container select{
+    border:none;
+    border-radius: 4px;
+    outline:none;
+}
+.font-family-prop
+{
+    padding:0.2rem;
+}
+.font-size-prop
+{
+    padding:0.2rem;
+}
+.color-prop{
+    position: relative;
+}
+.color-prop :hover{
+    cursor: pointer;
+}
+.color-prop > input{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+/* sheet styles */
+.sheet-folder-container{
+    height:80%;
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 2vw);
+    padding-left: 1rem;
+}
+.sheet-action-container{
+    height:3rem;
+    background-color:#f9fbfd;
+    display: flex;
+    align-items: center;
+    padding-left:1rem;
+    padding-right:0.5rem;
+    gap:1rem;
+    
+}
+
+.sheet-add-icon
+{
+    width:2vw;
+}
+.sheet-folder{
+    text-decoration: underline;
+    font-weight: 600;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+}
+
+
+/* formula bar styles */
+.formula-action-container{
+    height:3rem;
+    background-color:#edf2fa;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.formula-action-container >*{
+    display: inline-block;
+    
+}
+.formula-action-container > input{
+    border:none;
+    border-radius: 4px;
+    height: 50%;
+    outline:none;
+}
+.formula-icon{
+    width: 1.75rem;
+    border-left: 2px solid lightgray;
+    margin-right: 0.5rem;
+    padding-left:0.5rem;
+
+}
+.address-bar{
+    width: 5rem;
+    text-align:center;
+    margin-right: 0.5rem;
+}
+.formula-bar{
+    width:calc(100vw - 9.8rem);
+}
+
+
+/* grid styling */
+
+.top-left-dummy-cell
+{
+    height:1.45rem;
+    width: 2.5rem;
+    background-color: color(srgb 0.7529 0.7529 0.753);
+}
+.grid-container{
+    height:calc(100vh - 12rem);
+    position: relative;
+    overflow: scroll;
+    background-color: color(srgb 0.9999 1 1);
+   
+}
+
+.address-col-container
+{
+   position: sticky;
+    width: 2.5rem;
+    top:0rem;
+    z-index:2;
+    background-color: white;
+    left: 0rem;
+
+    
+}
+.address-row-container
+{
+   position:sticky;
+   z-index: 3;
+   background-color: white;
+   top:0rem;
+   left:0;
+    height: 1.5rem;
+    margin-left: -0.1rem;
+    
+   
+}
+.cells-container{
+    position:absolute;
+    top:0rem;
+    left: 2.5rem;
+    
+
+}
+.address-col{
+    height:1.5rem;
+    width: 2.5rem;
+    text-align: center;
+    border-top:1px solid color(srgb 0.7529 0.7529 0.753);
+    border-left:1px solid color(srgb 0.7529 0.7529 0.753);
+    border-right:1px solid color(srgb 0.7529 0.7529 0.753);
+
+}
+.address-row-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.address-row{
+    height: 100%;
+    padding-top: 0.15rem;
+    width: 5rem;
+    text-align: center;
+    border-top:1px solid color(srgb 0.7529 0.7529 0.753);
+    border-left:1px solid color(srgb 0.7529 0.7529 0.753);
+    border-bottom:1px solid color(srgb 0.7529 0.7529 0.753); 
+}
+.cell
+{
+    height: 1.5rem;
+    width: 5rem;
+    border-bottom:1px solid color(srgb 0.7529 0.7529 0.753);
+    border-right:1px solid color(srgb 0.7529 0.7529 0.753);
+    outline: none;
+    font-family: monospace;
+    font-size: 14px;
+}
+.row
+{
+    display: flex;
+    z-index: 1;
+}

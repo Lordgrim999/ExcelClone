@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Excel</title>
+</head>
+
+<body>
+    <div class="page-action-container">
+        <div class="page-action">Home</div>
+        <div class="page-action">File</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+    <div class="cell-props-container">
+        <span class="material-icons ">
+            content_copy
+        </span>
+        <span class="material-icons ">
+            content_cut
+        </span>
+        <span class="material-icons ">
+            content_paste
+        </span>
+        <select class="font-family-prop">
+            <option value="monospace">Monospace</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">Cursive</option>
+            <option value="Arial">Arial</option>
+            <option value="Segoe UI">Segoe UI</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+        </select>
+        <select class="font-size-prop">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14" selected>14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+            <option value="26">26</option>
+        </select>
+        <span class="material-icons bold">
+            format_bold
+        </span>
+        <span class="material-icons underline">
+            format_underlined
+        </span>
+        <span class="material-icons italic">
+            format_italic
+        </span>
+        <span class="left material-icons alignment">
+            format_align_left
+        </span>
+        <span class="center material-icons alignment">
+            format_align_center
+        </span>
+        <span class="right material-icons alignment">
+            format_align_right
+        </span>
+        <div class="color-prop">
+            <span class="material-icons ">
+                format_color_text
+            </span>
+            <input type="color" class="font-color-prop">
+        </div>
+        <div class="color-prop">
+            <span class="material-icons ">
+                format_color_fill
+            </span>
+            <input type="color" class="background-color-prop">
+        </div>
+    </div>
+
+    <div class="formula-action-container">
+        <input type="text" readonly class="address-bar">
+        <img class="formula-icon" src="./static/icons/icons8-formula-32.png" alt="formula-fx" />
+        <input type="text" class="formula-bar">
+    </div>
+    <div class="grid-container">
+        <div class="top-left-dummy-cell">
+
+        </div>
+        <div class="address-col-container"></div>
+
+        <div class="cells-container">
+            <div class="address-row-container"></div>
+        </div>
+    </div>
+    <div class="sheet-action-container">
+        <div class="sheet-add-icon">
+            <span class="material-icons ">
+                post_add
+            </span>
+        </div>
+
+        <div class="sheet-folder-container">
+            <div class="sheet-folder">sheet 1</div>
+        </div>
+    </div>
+    <script src="./grid.js"></script>
+    <script src="./cell-properties.js"></script>
+    <script src="./cycle-detection.js  "></script>
+    <script src="./trace-cyclic-path.js  "></script>
+    <script src="./formula.js"></script>
+</body>
+
+</html>
